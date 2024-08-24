@@ -354,3 +354,17 @@ input[type="submit"] {
     width: 80%;
   }
 }
+
+.mg-prev,
+.mg-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  background: white;
+}
+.mg-prev {
+  left: -15px;
+}
+.mg-next {
+  right: -15px;
+}
