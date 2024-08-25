@@ -107,6 +107,7 @@
       const imagesCollection = [];
 
       $(".item-column").each(function () {
+        //! TODO - Fix bug ajout a de  imagesCollection au bonne référence d'images afin de pouvoir naviguer correctement lors du switch des images. Voir également la méthode qui clique sur prev et next button car passe directement au dernier ou au premier index de la collection référencer
         const img = $(this).children("img");
         if (activeTag === "all" || img.data("gallery-tag") === activeTag) {
           imagesCollection.push(img);
