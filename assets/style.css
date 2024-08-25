@@ -368,3 +368,8 @@ input[type="submit"] {
 .mg-next {
   right: -15px;
 }
+
+.carousel-item.active > img {
+  width: 100%;
+  aspect-ratio: 175∶81;
+}
