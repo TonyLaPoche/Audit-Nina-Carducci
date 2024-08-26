@@ -107,20 +107,20 @@
       const imagesCollection = [];
 
       $(".item-column").each(function () {
-        //! TODO - Fix bug ajout a de  imagesCollection au bonne référence d'images afin de pouvoir naviguer correctement lors du switch des images. Voir également la méthode qui clique sur prev et next button car passe directement au dernier ou au premier index de la collection référencer
         const img = $(this).children("img");
         if (activeTag === "all" || img.data("gallery-tag") === activeTag) {
           imagesCollection.push(img);
         }
       });
 
-      const currentIndex = imagesCollection.indexOf(activeImage);
+      const currentIndex = imagesCollection.findIndex((img) => img[0].src === activeImage[0].src);
       let newIndex = currentIndex + (direction === "next" ? 1 : -1);
 
       if (newIndex < 0) newIndex = imagesCollection.length - 1;
       if (newIndex >= imagesCollection.length) newIndex = 0;
 
       const nextImage = imagesCollection[newIndex];
+
       $(`#${lightboxId} .lightboxImage`).attr("src", nextImage.attr("src"));
     },
 
