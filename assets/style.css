@@ -373,3 +373,7 @@ input[type="submit"] {
   width: 100%;
   aspect-ratio: 175∶81;
 }
+
+.nav-item {
+  cursor: pointer;
+}
