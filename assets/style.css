@@ -377,3 +377,17 @@ input[type="submit"] {
 .nav-item {
   cursor: pointer;
 }
+
+.carousel .carousel-indicators button {
+  background-color: white !important;
+  opacity: 1 !important;
+  color: black !important;
+  border: 1px solid #000000 !important;
+}
+
+.carousel .carousel-indicators button.active {
+  opacity: 1 !important;
+  background-color: black !important;
+  color: white !important;
+  border: 1px solid white !important;
+}
